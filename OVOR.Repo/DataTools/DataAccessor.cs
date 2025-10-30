@@ -13,7 +13,7 @@ namespace OVOR.Repo.DataTools
 
         public static void Initialize(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("Database".ToString());
+            _connectionString = configuration.GetConnectionString("Default");
         }
 
         // To return no value just update db.
