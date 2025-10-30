@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\OVOR.Repo\OVOR.Repo.csproj" />
+		<ProjectReference Include="..\OVOR.Models\OVOR.Models.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.csproj.AssemblyReference.cache
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.AssemblyInfoInputs.cache
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.AssemblyInfo.cs
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.csproj.CoreCompileInputs.cache
+D:\OVOR\OVOR\OVOR.Repo\bin\Debug\net8.0\OVOR.Repo.deps.json
+D:\OVOR\OVOR\OVOR.Repo\bin\Debug\net8.0\OVOR.Repo.dll
+D:\OVOR\OVOR\OVOR.Repo\bin\Debug\net8.0\OVOR.Repo.pdb
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.dll
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\refint\OVOR.Repo.dll
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.pdb
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\ref\OVOR.Repo.dll
+D:\OVOR\OVOR\OVOR.Repo\bin\Debug\net8.0\OVOR.Models.dll
+D:\OVOR\OVOR\OVOR.Repo\bin\Debug\net8.0\OVOR.Models.pdb
+D:\OVOR\OVOR\OVOR.Repo\obj\Debug\net8.0\OVOR.Repo.csproj.Up2Date

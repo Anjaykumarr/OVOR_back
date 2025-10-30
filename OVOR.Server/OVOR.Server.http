@@ -1,0 +1,6 @@
+@OVOR.Controller_HostAddress = http://localhost:5025
+
+GET {{OVOR.Controller_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

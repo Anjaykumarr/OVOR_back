@@ -1,0 +1,17 @@
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Services.deps.json
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Services.dll
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Services.pdb
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Models.dll
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Repo.dll
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Repo.pdb
+D:\OVOR\OVOR\OVOR.Services\bin\Release\net8.0\OVOR.Models.pdb
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.csproj.AssemblyReference.cache
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.AssemblyInfoInputs.cache
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.AssemblyInfo.cs
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.csproj.CoreCompileInputs.cache
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Ser.AA3D28E0.Up2Date
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.dll
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\refint\OVOR.Services.dll
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\OVOR.Services.pdb
+D:\OVOR\OVOR\OVOR.Services\obj\Release\net8.0\ref\OVOR.Services.dll

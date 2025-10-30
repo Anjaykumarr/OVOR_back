@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:57483",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "D:\\OVOR\\OVOR\\OVOR.Server\\..\\ovor.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
