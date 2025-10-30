@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using OVOR.Repo.DataTools;
 using OVOR.Repo.Repo;
 using OVOR.Services.ProjectServices;
@@ -5,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ Initialize Data Access
+// ✅ Initialize Database / Data Access
 DataAccessor.Initialize(builder.Configuration);
 
 // ✅ Register Dependencies
@@ -17,48 +18,50 @@ builder.Services.AddHttpClient<ProjectServices>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ✅ CORS setup — allow your frontend (Render + local dev)
+// ✅ Add Controllers + Newtonsoft JSON
+builder.Services.AddControllers().AddNewtonsoftJson();
+
+// ✅ Configure CORS for Render + local dev
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
         policy.WithOrigins(
-            "https://ovor-front.onrender.com",  // ✅ your actual frontend Render URL
-            "http://localhost:5173"             // ✅ allow local dev too
+            "https://ovor-front.onrender.com",  // ✅ Your Render frontend
+            "http://localhost:5173"             // ✅ For local testing (optional)
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
 });
 
-builder.Services.AddControllers().AddNewtonsoftJson();
-
 var app = builder.Build();
 
-// ✅ Make it listen to Render’s PORT
+// ✅ Render dynamic port binding
 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
 app.Urls.Clear();
 app.Urls.Add($"http://0.0.0.0:{port}");
 
-// ✅ Order matters — this order is correct
+// ✅ Middleware (order matters)
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
+// ✅ CORS must come before routing
 app.UseCors("AllowReactApp");
+
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
 
-// ✅ Swagger (only in dev)
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// ✅ Swagger for API testing (available even in production if needed)
+app.UseSwagger();
+app.UseSwaggerUI();
 
-// ✅ Map your API controllers
+// ✅ Map API controllers
 app.MapControllers();
 
-// ✅ Health check for Render
+// ✅ Health check endpoint for Render
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
+// ✅ Run the app
 app.Run();
