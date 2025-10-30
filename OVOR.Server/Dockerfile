@@ -1,25 +1,23 @@
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy solution and all csproj files
-COPY OVOR.sln .
-COPY OVOR.Server/*.csproj ./OVOR.Server/
-COPY OVOR.Models/*.csproj ./OVOR.Models/
-COPY OVOR.Repo/*.csproj ./OVOR.Repo/
-COPY OVOR.Services/*.csproj ./OVOR.Services/
+# Copy only the backend project file and restore dependencies
+COPY OVOR.Server/OVOR.Server.csproj ./OVOR.Server/
+RUN dotnet restore "OVOR.Server/OVOR.Server.csproj"
 
-RUN dotnet restore "OVOR.sln"
-
-# Copy everything else
+# Copy everything else and build
 COPY . .
-
 WORKDIR /src/OVOR.Server
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
+# Render assigns $PORT automatically
 ENV ASPNETCORE_URLS=http://+:$PORT
 EXPOSE 8080
+
 ENTRYPOINT ["dotnet", "OVOR.Server.dll"]
